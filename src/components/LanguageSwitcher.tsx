@@ -15,7 +15,10 @@ const LanguageSwitcher = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    if (!user?.subscriptions) return;
+    if (!user?.subscriptions || user.subscriptions.length === 0) {
+      setUserAllowedLanguages(['en', 'fr', 'kiny']);
+      return;
+    }
 
     const langs: ('en' | 'fr' | 'kiny')[] = [];
     let activeLang: 'en' | 'fr' | 'kiny' | null = null;
@@ -27,7 +30,6 @@ const LanguageSwitcher = () => {
       else if (lang === 'en' && !langs.includes('en')) langs.push('en');
     });
 
-    // Get preferred language from active_subscription
     const actLang = user.active_subscription?.language?.toLowerCase();
     if (actLang === 'ki') activeLang = 'kiny';
     else if (actLang === 'fr') activeLang = 'fr';
@@ -35,7 +37,6 @@ const LanguageSwitcher = () => {
 
     setUserAllowedLanguages(langs);
 
-    // Set preferred language based on active subscription (if different from current)
     if (activeLang && langs.includes(activeLang) && state.currentCode !== activeLang) {
       setLanguage(activeLang);
     }
