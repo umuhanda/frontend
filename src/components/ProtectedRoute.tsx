@@ -1,7 +1,13 @@
 import { Navigate, Outlet } from 'react-router-dom';
 
+const getCookie = (name: string) => {
+  const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
+  return match ? match[2] : null;
+};
+
 export const isAuthenticated = () => {
-  const token = sessionStorage.getItem('token');
+  let token = sessionStorage.getItem('token');
+  if (!token) token = getCookie('authToken');
   if (!token) return false;
 
   try {
