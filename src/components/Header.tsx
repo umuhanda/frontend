@@ -45,7 +45,7 @@ const Header = () => {
             {isAuthenticated() && (
               <li>
                 <NavLink
-                  to="client"
+                  to="/client"
                   className={({ isActive }) =>
                     `text-sm font-medium ${
                       isActive ? 'text-blue-500 underline' : 'text-gray-700'
