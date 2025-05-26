@@ -135,7 +135,11 @@ const Settings = () => {
   const handleChangePassword = async (e: any) => {
     e.preventDefault();
     if (passwordData.new_password !== passwordData.confirm_password) {
-      toast.error('New password and confirm password do not match!');
+      toast.error('New password and confirm new password do not match!');
+      return;
+    }
+    if (passwordData.new_password.length < 6) {
+      toast.error('Password Must be at least 6 characters!');
       return;
     }
 

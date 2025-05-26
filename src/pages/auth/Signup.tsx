@@ -117,7 +117,7 @@ const Signup = () => {
                 htmlFor="phone_number"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                {t('phoneNumber')}
+                {t('phoneNumber')} (+25078...)
               </label>
               <input
                 type="text"

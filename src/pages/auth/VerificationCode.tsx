@@ -58,7 +58,7 @@ const VerificationCode = () => {
     <div className="flex flex-col lg:flex-row h-screen">
       <div className="flex-1 bg-gray-50 p-8 flex flex-col">
         <img src={logo} alt="Umuhanda Logo" className="w-40 mb-8" />
-        <div className="flex flex-colN items-center">
+        <div className="flex flex-col items-center">
           <h1 className="text-2xl font-bold text-gray-800 text-center mb-6">
             {t('enter_reset_code')}
           </h1>

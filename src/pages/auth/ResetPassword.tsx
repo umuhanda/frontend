@@ -11,7 +11,6 @@ const ResetPassword = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [emailOrPhone, setEmailOrPhone] = useState('');
-  const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -19,11 +18,18 @@ const ResetPassword = () => {
     setLoading(true);
     try {
       const response = await axios.post('/auth/request-reset', { emailOrPhone });
-      setMessage(response.data.message);
-      navigate('/verificationcode', { state: { emailOrPhone } });
+      if (response.status == 404) {
+        toast.error('User With Such Email Is Not Found !');
+        return;
+      }
+      if (response.status == 200) {
+        toast.success(response.data.message);
+        navigate('/verificationcode', { state: { emailOrPhone } });
+      } else {
+        toast.error('An expected error occurred !');
+      }
     } catch (error: any) {
-      setMessage(error.response?.data?.error || 'Something went wrong.');
-      toast.error(message);
+      toast.error(error.response?.data?.error || 'Something went wrong.');
     }
     setLoading(false);
   };

@@ -15,14 +15,16 @@ const PasswordConfirmation = () => {
   const resetCode = location.state?.resetCode || '';
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      setMessage('Passwords do not match!');
-      toast.error(message);
+      toast.error('Passwords do not match!');
+      return;
+    }
+    if (password.length < 6) {
+      toast.error('Passwords must be at least 6  characters');
       return;
     }
     setLoading(true);
@@ -32,12 +34,10 @@ const PasswordConfirmation = () => {
         resetCode,
         newPassword: password,
       });
-      setMessage(response.data.message);
-      toast.success(message);
+      toast.success(response.data.message);
       navigate('/signin');
     } catch (error: any) {
-      setMessage(error.response?.data?.error || 'Something went wrong.');
-      toast.error(message);
+      toast.error(error.response?.data?.error || 'Something went wrong.');
     }
     setLoading(false);
   };
