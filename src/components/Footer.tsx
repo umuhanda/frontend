@@ -1,5 +1,5 @@
 import logo from '../assets/Umuhanda_logo.png';
-import { FaInstagram, FaFacebook, FaYoutube, FaTwitter, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaYoutube, FaTwitter, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
   const socialLinks = [
@@ -16,6 +16,7 @@ const Footer = () => {
     },
     { icon: FaTwitter, href: '#', label: 'Twitter' },
     { icon: FaTiktok, href: 'https://vm.tiktok.com/ZMkv4CPTe/', label: 'TikTok' },
+    { icon: FaWhatsapp, href: 'https://Wa.me/+250781272066', label: 'Whatsapp' },
   ];
 
   return (

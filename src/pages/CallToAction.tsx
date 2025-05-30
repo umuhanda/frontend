@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import video from '../assets/video1.mp4';
+// import video from '../assets/video1.mp4';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router';
 
@@ -12,18 +12,19 @@ const CallToAction = () => {
   return (
     <div className="relative flex items-center justify-center my-6">
       {/* Video Background */}
-      <video
+      {/* <video
         src={video}
         className="rounded-md w-[80vw] max-h-[600px] max-sm-w:[100vw] object-cover"
         autoPlay
         muted
         loop
-      />
+      /> */}
+      <img src="https://i.imgur.com/R3C788r.png"  className="rounded-md w-[80vw] max-h-[600px] max-sm-w:[100vw] object-cover"/>
 
       {/* Overlay Content */}
       <div className="absolute flex flex-col items-center text-center space-y-4  p-6 rounded-md">
         <motion.p
-          className="text-lg sm:text-4xl font-bold text-blue-700 "
+          className="text-lg sm:text-4xl font-bold text-white "
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
