@@ -82,6 +82,7 @@ export const resources = {
         login: 'Sign In',
         forgot_password: 'Forgot Password?',
         create_account: 'Create Account',
+        back_home: 'Back Home',
       },
 
       signup: 'Create an Account',
@@ -251,6 +252,7 @@ export const resources = {
         login: 'Connexion',
         forgot_password: 'Mot de passe oublié ?',
         create_account: 'Créer un Compte',
+        back_home: "Retour à la page d'accueil",
       },
 
       signup: 'Créer un Compte',
@@ -353,11 +355,11 @@ export const resources = {
       choosePlan: 'Hitamo Ifatabuguzi',
       plan_one_header: "Plan y'Ibizamini Bitandatu",
       plan_one_description: 'Niba ushaka kwiga mugihe gitoya',
-      exam_only_option: 'Gukora ibizamini bitanu gusa',
+      exam_only_option: 'Gukora ibizamini bitandatu gusa',
       limited_attempts: 'Inshuro 6 gusa',
       video_access: 'Nta video wemerewe kureba',
       reading_permission: 'Nta gusoma wemerewe',
-      duration_three_days: 'Ibizamini bitanu',
+      duration_three_days: 'Ibizamini bitandatu',
 
       plan_two_header: "Plan y'Ubwisungane Bwohejuru",
       plan_two_description: 'Kwiga ufite uburenganzira bwose',
@@ -418,6 +420,7 @@ export const resources = {
         login: 'Injiramo',
         forgot_password: "Wibagiwe W'Ibanga?",
         create_account: 'Kora Konti',
+        back_home:"Subira Aho Winjirira",
       },
 
       signup: 'Kora Konte',

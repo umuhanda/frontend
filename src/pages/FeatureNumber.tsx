@@ -35,8 +35,8 @@ const FeatureNumber = () => {
           <div className="flex flex-row items-center space-x-2" key={feature.id}>
             {feature.icon}
             <div className="flex-col">
-              <span className="text-xl font-bold">{feature.status}+</span>
-              <p>{t(feature.desc)}</p>
+              <span className="text-sm md:text-xl font-bold">{feature.status}+</span>
+              <p className="text-sm md:text-xl">{t(feature.desc)}</p>
             </div>
           </div>
         );
