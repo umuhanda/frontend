@@ -135,6 +135,13 @@ const Signin = () => {
             >
               {t('signin.create_account')}
             </button>
+             <button
+              type="button"
+              className="w-full bg-gray-100 py-3 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition"
+              onClick={() => navigate('/')}
+            >
+              {t('signin.back_home')}
+            </button>
           </form>
         </div>
       </div>

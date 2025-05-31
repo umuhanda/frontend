@@ -27,7 +27,7 @@ const Header = () => {
       <div className="flex flex-col sm:flex-row items-center sm:space-x-8 max-sm:space-y-4 sm:space-y-0">
         {/* Navigation Menu */}
         <nav aria-label="Main navigation">
-          <ul className="flex items-center space-x-8 sm:space-x-8">
+          <ul className="flex flex-col md:flex-row items-center space-x-8 sm:space-x-8">
             {MENU_ITEMS.map((item, index) => (
               <li key={index}>
                 <NavLink
