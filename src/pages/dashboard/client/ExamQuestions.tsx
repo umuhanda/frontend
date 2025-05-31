@@ -25,7 +25,7 @@ interface Answer {
   isCorrect: boolean;
 }
 
-const EXAM_TIME = 1 * 60; // 20 minutes in seconds
+const EXAM_TIME = 20 * 60; // 20 minutes in seconds
 const QUESTIONS_LIMIT = 20;
 
 const LOCAL_STORAGE_KEYS = {
