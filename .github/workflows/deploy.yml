@@ -33,4 +33,4 @@ jobs:
           protocol: ftp         # or ftps/ftps-legacy if needed
           port: 21             # adjust if Hostinger uses non-standard port
           local-dir: dist/
-          server-dir: public_html/
+          server-dir: /
