@@ -24,7 +24,7 @@ jobs:
       - name: 🏗️ Build Vite App
         run: npm run build
         env:
-          VITE_API_URL: https://umuhanda-bn.onrender.com/
+          VITE_API_URL: https://umuhanda-bn.onrender.com
 
 
       - name: 📤 Deploy via FTP
