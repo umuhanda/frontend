@@ -15,6 +15,7 @@ export const isAuthenticated = () => {
     const expirationTime = payload.exp * 1000; // Convert to milliseconds
     return Date.now() < expirationTime; // Check if token is still valid
   } catch (error) {
+    console.error('❌ Invalid token format:', error);
     return false; // Invalid token format
   }
 };
