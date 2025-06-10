@@ -13,6 +13,7 @@ const Testimonial = () => {
         {TestimonialData.map((testimonial) => (
           <TestimonialCard
             key={testimonial.id}
+            index={testimonial.id}
             name={testimonial.name}
             initials={testimonial.initials}
             rating={testimonial.rating}

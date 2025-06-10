@@ -67,7 +67,7 @@ const PaymentButton = ({
       className={`w-full flex justify-center px-6 py-3 rounded-lg shadow-md transition-all duration-300 ${
         loading || disabled
           ? 'bg-blue-400 cursor-not-allowed'
-          : 'bg-blue-600 hover:bg-blue-700 text-white hover:bg-blue-700'
+          : 'bg-blue-600 hover:bg-blue-700 text-white '
       }`}
     >
       {loading ? (

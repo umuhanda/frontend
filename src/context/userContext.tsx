@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { getuserInfo } from '../utils/getUserInfo';
 import { getuserAttempts } from '../utils/getuserAttempts';

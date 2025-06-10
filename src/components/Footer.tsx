@@ -1,3 +1,4 @@
+import { MdEmail } from 'react-icons/md';
 import logo from '../assets/Umuhanda_logo.png';
 import { FaInstagram, FaFacebook, FaYoutube, FaTwitter, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 
@@ -17,6 +18,7 @@ const Footer = () => {
     { icon: FaTwitter, href: '#', label: 'Twitter' },
     { icon: FaTiktok, href: 'https://vm.tiktok.com/ZMkv4CPTe/', label: 'TikTok' },
     { icon: FaWhatsapp, href: 'https://Wa.me/+250781272066', label: 'Whatsapp' },
+    { icon: MdEmail, href: 'mailto:umuhanda28@gmail.com', label: 'Gmail' },
   ];
 
   return (

@@ -1,3 +1,4 @@
+
 export const resources = {
   en: {
     translation: {
@@ -13,6 +14,11 @@ export const resources = {
 
       igazeti: 'books',
       testimonial_header: 'See what other clients say',
+      testimonial_message_1:
+        "I started studying provisional on this site a month ago. After studying the lessons and tutorials available, I was able to understand the frequently asked questions in the exam. This allowed me to pass my provisional exam without difficulty. I thank this site for its exceptional help!",
+      testimonial_message_2:"I had concerns about how I was preparing for the provisional exam. We discovered this site and started using its lessons every day. Thanks to the way the lessons are well organized and explained, I learned with confidence. I passed on the first try! Although it is a difficult exam, this platform helped me a lot!",
+      testimonial_message_3:
+        "Due to my busy schedule, I didn't have enough time to go to school. This site gave me the opportunity to study anytime, whether at night or during holidays. I studied all the different lessons and took tests. This made it easier for me to understand the frequently asked questions. Now, I have my provisional license!",
 
       // Pricing-related translations
       choosePlan: 'Choose a plan',
@@ -183,6 +189,12 @@ export const resources = {
 
       igazeti: 'Livre',
       testimonial_header: 'Découvrez ce que disent les autres clients',
+      testimonial_message_1:
+        "J'ai commencé à étudier le provisoire sur ce site il y a un mois. Après avoir étudié les leçons et les tutoriels disponibles, j'ai pu comprendre les questions fréquemment posées lors de l'examen. Cela m'a permis de réussir mon examen provisoire sans difficulté. Je remercie ce site pour son aide exceptionnelle !",
+      testimonial_message_2:
+        "J'avais des inquiétudes quant à la façon dont je me préparais à l'examen provisoire. Nous avons découvert ce site et avons commencé à utiliser ses leçons chaque jour. Grâce à la manière dont les leçons sont bien organisées et expliquées, j'ai appris avec confiance. J'ai réussi du premier coup ! Bien que ce soit un examen difficile, cette plateforme m'a beaucoup aidé !",
+      testimonial_message_3:
+        "En raison de mon emploi du temps chargé, je n'avais pas assez de temps pour aller à l'école. Ce site m'a donné l'opportunité d'étudier à tout moment, que ce soit la nuit ou pendant les vacances. J'ai étudié toutes les leçons différentes et j'ai passé des tests. Cela m'a facilité la compréhension des questions fréquemment posées. Maintenant, j'ai mon permis provisoire !",
 
       // Pricing-related translations
       choosePlan: 'Choisissez un plan',
@@ -350,6 +362,9 @@ export const resources = {
 
       igazeti: 'Igazeti',
       testimonial_header: 'Reba ibyo abandi banyeshuri bavuga',
+      testimonial_message_1: "Natangiye kwiga ibyerekeye provisoire kuri iyi website mu gihe cy’ukwezi. Nyuma y'uko niga neza amasomo n’inyigisho zihari, nabashije kumenya ibibazo bisanzwe bibazwa mu kizamini. Ibi byatumye natsinda kizamini cya provisoire nta nkomyi. Ndashimira iyi website ku bufasha bwayo bw’indashyikirwa!",
+      testimonial_message_2:"Nari mfite impungenge ku buryo niteguraga ikizamini cya provisoire. Twaje kubona iyi website, dutangira gukoresha amasomo yayo buri munsi. Kubera uburyo amasomo ateguye neza kandi asobanutse, nize afite icyizere. natsinze ku nshuro ya mbere! Nubwo ari ikizamini gikomeye, iyi platform yaramfashije cyane!",
+      testimonial_message_3: "Kubera akazi kenshi mfite, sinabashaga kubona umwanya uhagije wo kujya mu ishuri. Iyi website yampaye amahirwe yo kwiga igihe cyose mfite akanya, haba nijoro cyangwa mu biruhuko. Nize amasomo yose atandukanye, nkorera n’ibizamini bya test. Byaranyoroheye gutahura ibibazo bikunda kubazwa. Ubu mfite uruhushya rwa provisoire!",
 
       // Pricing-related translations
       choosePlan: 'Hitamo Ifatabuguzi',

@@ -1,17 +1,20 @@
 import { FaStar } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 interface TestimonialCardProps {
+  index: number;
   name: string;
   initials: string;
   rating: number;
-  text: string;
+  text?: string;
 }
 
-const TestimonialCard = ({ name, initials, rating, text }: TestimonialCardProps) => {
+const TestimonialCard = ({ index,name, initials, rating }: TestimonialCardProps) => {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 !== 0;
+  const {t} = useTranslation();
 
   return (
     <motion.div
@@ -35,7 +38,7 @@ const TestimonialCard = ({ name, initials, rating, text }: TestimonialCardProps)
         </div>
         <p>{rating}/5</p>
       </div>
-      <p className="p-6 text-sm text-gray-700">{text}</p>
+      <p className="p-6 text-sm text-gray-700">{t(`testimonial_message_${index}`)}</p>
       <div className="pt-4 bg-blue-500 rounded-ss-3xl rounded-tr-3xl flex space-x-4 p-4 items-center ">
         <div className="rounded-full bg-white text-blue-500 p-2 flex items-center justify-center w-8 h-8">
           {initials}

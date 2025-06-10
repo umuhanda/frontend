@@ -3,7 +3,7 @@ name: 🚀 Deploy React App to Hostinger via FTP
 on:
   push:
     branches:
-      - main  # or your deployment branch
+      - main 
 
 jobs:
   build-and-deploy:
@@ -33,7 +33,7 @@ jobs:
           server: ftp.umuhanda.org
           username: u568627481.github
           password: Umuhanda@123
-          protocol: ftp         # or ftps/ftps-legacy if needed
-          port: 21             # adjust if Hostinger uses non-standard port
+          protocol: ftp      
+          port: 21            
           local-dir: dist/
           server-dir: /
