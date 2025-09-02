@@ -59,7 +59,7 @@ const Hero = () => {
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent" />
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               className="relative w-full max-w-md lg:-ml-8 hidden md:block"
               initial={{ x: -20 }}
               animate={{ x: 0 }}
@@ -71,7 +71,7 @@ const Hero = () => {
                 className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
               />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent" />
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>
