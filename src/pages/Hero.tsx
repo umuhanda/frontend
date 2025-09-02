@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import umuhanda1 from '../assets/umuhandapic1.jpg';
-import umuhanda2 from '../assets/umuhandapic2.jpg';
+// import umuhanda2 from '../assets/umuhandapic2.jpg';
 import { useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
 
