@@ -1,18 +1,16 @@
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 import { IoSettingsOutline } from 'react-icons/io5';
-import LanguageSwitcher from '../../../../components/LanguageSwitcher';
 import { useNavigate } from 'react-router';
-import { useEffect, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
-import { useTranslation } from 'react-i18next';
-import axios from '../../../../config/axios';
-import { toast } from 'react-toastify';
+import LanguageSwitcher from '../../../../components/LanguageSwitcher';
 import { useUser } from '../../../../context/userContext';
 
 const Header = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const { user, fetchUser, updateActiveSubscription } = useUser();
+  const { user, fetchUser } = useUser();
   useEffect(() => {
     const fetchData = async () => {
       await fetchUser();
@@ -20,29 +18,7 @@ const Header = () => {
     fetchData();
   }, [user?.active_subscription?._id]);
 
-  const [activeSubscriptionId, setActiveSubscriptionId] = useState(
-    user?.active_subscription?._id || '',
-  );
 
-  const handleActiveChange = async (e: any) => {
-    const selectedId = e.target.value;
-    setActiveSubscriptionId(selectedId);
-
-    try {
-      const response = await axios.post('/user-subscription/change-active', {
-        subscription_id: selectedId,
-      });
-      updateActiveSubscription(selectedId);
-      if (response.status == 200) {
-        toast.success('Active subscription changed!');
-      } else {
-        toast.error(response.data.message);
-      }
-    } catch (error: any) {
-      console.log(error);
-      toast.error(error.response.data.message);
-    }
-  };
 
   return (
     <header className="sticky top-0 z-10 flex justify-between items-center w-full px-6 py-4 border-b border-slate-200 bg-white shadow-sm">
@@ -66,22 +42,7 @@ const Header = () => {
         >
           <IoIosCheckmarkCircleOutline className="text-gray-600 group-hover:text-blue-500 text-2xl transition duration-300 ease-in-out" />
         </button>
-        {user?.subscriptions?.length > 0 ? (
-          <select
-            className="border bg-inherit border-blue-300 rounded-md p-1 text-sm"
-            onChange={handleActiveChange}
-            value={activeSubscriptionId}
-          >
-            {user.subscriptions.map((sub: any) => (
-              <option key={sub._id} value={sub._id}>
-                {sub.subscription?.name || `Subscription ${sub._id}`}
-                {sub._id === activeSubscriptionId && ' ✅'}
-              </option>
-            ))}
-          </select>
-        ) : (
-          <span className="text-sm text-red-500 italic">{t('no_subs')}</span>
-        )}
+       
         {/* Settings Icon */}
         <button
           aria-label="Settings"

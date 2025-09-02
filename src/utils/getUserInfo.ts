@@ -1,5 +1,5 @@
 import axios from '../config/axios';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const getuserInfo = async () => {
@@ -13,6 +13,6 @@ export const getuserInfo = async () => {
   } catch (error: any) {
     console.log(error);
 
-    toast.error(error.response?.data?.error || 'Fetching User Profile failed');
+    // toast.error(error.response?.data?.error || 'Fetching User Profile failed');
   }
 };

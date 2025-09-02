@@ -16,11 +16,10 @@ const Signup = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     names: '',
-    email: '',
     phone_number: '',
     password: '',
-    confirmPassword: '',
   });
+
 
   const handleChange = (e: any) => {
     setFormData({
@@ -30,13 +29,9 @@ const Signup = () => {
   };
 
   const initialFormState = {
-    names: '',
-    email: '',
+    names:'',
     phone_number: '',
-    country: '',
-    city: '',
     password: '',
-    confirmPassword: '',
   };
 
   const handleSignup = async (e: any) => {
@@ -52,13 +47,13 @@ const Signup = () => {
     try {
       const response = await axios.post('/auth/register', {
         names: formData.names,
-        email: formData.email,
         phone_number: formData.phone_number,
         password: formData.password,
       });
       if (response.status == 201) {
         setFormData(initialFormState);
         toast.success(response.data.message);
+        navigate("/signin")
       } else {
         toast.success(response.data.message);
         navigate('/client');
@@ -100,24 +95,11 @@ const Signup = () => {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                {t('email')}
-              </label>
-              <input
-                type="text"
-                id="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder={t('enterEmail')}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
               <label
                 htmlFor="phone_number"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                {t('phoneNumber')} (+25078...)
+                {t('phoneNumber')} (078...)
               </label>
               <input
                 type="text"
@@ -136,22 +118,6 @@ const Signup = () => {
                 type="password"
                 id="password"
                 value={formData.password}
-                onChange={handleChange}
-                placeholder={t('enterPassword')}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="confirmPassword"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                {t('confirmPassword')}
-              </label>
-              <input
-                type="password"
-                id="confirmPassword"
-                value={formData.confirmPassword}
                 onChange={handleChange}
                 placeholder={t('enterPassword')}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"

@@ -15,11 +15,7 @@ interface ExamInfo {
   icon: JSX.Element;
 }
 
-const LANGUAGE_MAPPING: Record<string, string> = {
-  kiny: 'Kinyarwanda',
-  en: 'English',
-  fr: 'Français',
-} as const;
+
 
 // Animation variants
 const fadeInFromTop = {
@@ -36,14 +32,9 @@ const Exam = ({ path }: { path?: string }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const languageStatus = useMemo(() => {
-    const language = localStorage.getItem('i18nextLng');
-    return (
-      LANGUAGE_MAPPING[language as keyof typeof LANGUAGE_MAPPING] || 'Please choose a language'
-    );
-  }, []);
 
-  console.log(languageStatus);
+
+
 
   const examInfoItems: ExamInfo[] = useMemo(
     () => [

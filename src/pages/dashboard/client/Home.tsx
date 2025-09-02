@@ -1,28 +1,15 @@
-import { MdOutlinePlayLesson, MdOutlineSportsScore, MdOutlineTimer } from 'react-icons/md';
-import Layout from './Layout';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { MdOutlinePlayLesson, MdOutlineSportsScore, MdOutlineTimer } from 'react-icons/md';
 import { PiExamThin } from 'react-icons/pi';
 import Notes from './components/Notes';
-import { useTranslation } from 'react-i18next';
-import { useEffect, useState } from 'react';
-import Loader from './components/Loader';
-import { useUser } from '../../../context/userContext';
+import Layout from './Layout';
 
 const Home = () => {
   const { t } = useTranslation();
-  const { attempts, fetchAttempts, loading: userLoading, user } = useUser();
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const fetchData = async () => {
-      await fetchAttempts();
-      setLoading(false);
-    };
-    fetchData();
-  }, [user?.active_subscription?._id]);
 
-  if (loading || userLoading) {
-    return <Loader />;
-  }
+  
+
 
   return (
     <Layout>
@@ -57,7 +44,7 @@ const Home = () => {
             <div>
               <h2 className="text-lg sm:text-xl font-semibold text-gray-700">{t('exams_taken')}</h2>
               <p className="text-2xl sm:text-3xl font-bold text-green-500">
-                {attempts.totalAttempts}
+                {1}
               </p>
             </div>
           </motion.div>
@@ -73,7 +60,7 @@ const Home = () => {
               <h2 className="text-lg sm:text-xl font-semibold text-gray-700">
                 {t('highest_score')}
               </h2>
-              <p className="text-2xl sm:text-3xl font-bold text-red-500">{attempts.maxScore}</p>
+              <p className="text-2xl sm:text-3xl font-bold text-red-500">{1}</p>
             </div>
           </motion.div>
 
@@ -89,7 +76,7 @@ const Home = () => {
                 {t('attempts_left')}
               </h2>
               <p className="text-2xl sm:text-3xl font-bold text-purple-500">
-                {attempts.attemptsLeft}
+                {1}
               </p>
             </div>
           </motion.div>

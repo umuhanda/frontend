@@ -17,7 +17,7 @@ const Settings = () => {
   const token = sessionStorage.getItem('token');
   const [userInfo, setUserInfo] = useState({
     names: '',
-    email: '',
+
     phone_number: '',
     city: '',
     country: '',
@@ -26,7 +26,7 @@ const Settings = () => {
   });
   const [formData, setFormData] = useState({
     names: '',
-    email: '',
+
     phone_number: '',
     city: '',
     country: '',
@@ -48,7 +48,6 @@ const Settings = () => {
         if (userData) {
           const cleanedData = {
             names: userData.names || '',
-            email: userData.email || '',
             phone_number: userData.phone_number || '',
             city: userData.city || '',
             country: userData.country || '',
@@ -93,7 +92,7 @@ const Settings = () => {
         '/auth/update-profile',
         {
           names: formData.names,
-          email: formData.email,
+
           phone_number: formData.phone_number,
           city: formData.city,
           country: formData.country,
@@ -208,21 +207,6 @@ const Settings = () => {
                       value={formData.names}
                       onChange={handleChange}
                       // placeholder="Rukundo Eric"
-                      className="block w-full rounded-md border-gray-300 py-3 px-4 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    {t('email_label')}
-                  </label>
-                  <div className="relative rounded-md shadow-sm">
-                    <input
-                      type="email"
-                      id="email"
-                      value={formData.email}
-                      onChange={handleChange}
                       className="block w-full rounded-md border-gray-300 py-3 px-4 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200"
                     />
                   </div>

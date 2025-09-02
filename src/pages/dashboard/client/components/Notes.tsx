@@ -28,7 +28,7 @@ const Notes: React.FC<NotesProps> = ({ length }) => {
   const [filteredCourses, setFilteredCourses] = useState<Course[]>([]);
 
   const language = useLanguageDetector();
-  console.log(language);
+
 
   useEffect(() => {
     // Filter courses based on the provided length
